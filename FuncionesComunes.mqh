@@ -45,12 +45,12 @@ void checkTrailingStop() {
       if (OrderSelect(i,SELECT_BY_POS,MODE_TRADES)){
          if (OrderSymbol() == Symbol() && OrderMagicNumber() == Magic){
          
-            double stoplossCompra = NormalizeDouble(Ask - trailingStopFactor, Digits);
+            double stoplossCompra = NormalizeDouble(Ask - (trailingStopFactor * pipValue), Digits);
             if (OrderType() == OP_BUY && stoplossCompra > OrderStopLoss()) {
                OrderModify(OrderTicket(),OrderOpenPrice(),stoplossCompra,0,0,Blue);
             }
             
-            double stoplossVenta = NormalizeDouble(trailingStopFactor + Bid, Digits);
+            double stoplossVenta = NormalizeDouble((trailingStopFactor * pipValue) + Bid, Digits);
             if (OrderType() == OP_SELL && stoplossVenta < OrderStopLoss()) {
                OrderModify(OrderTicket(),OrderOpenPrice(),stoplossVenta,0,0,Blue);
             }
@@ -61,9 +61,9 @@ void checkTrailingStop() {
 
 
 
-double calculateLotSize(double SL){
+double calculateLotSize(double SL) {
    double lotSize = (cuenta * risk / 100) / (SL);
-   return lotSize / pipValue;
+   return (lotSize * pipValue);
 }
 
 
