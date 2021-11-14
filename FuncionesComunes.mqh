@@ -76,3 +76,5 @@ bool isNewCandle() {
       return true;
    }
 }
+
+
