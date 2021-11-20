@@ -43,12 +43,12 @@ void checkTrailingStop() {
       if (OrderSelect(i,SELECT_BY_POS,MODE_TRADES)){
          if (OrderSymbol() == Symbol() && OrderMagicNumber() == Magic){
          
-            double stoplossCompra = NormalizeDouble(Ask - (trailingStopFactor), Digits);
+            double stoplossCompra = NormalizeDouble(Ask - (trailingStopFactor / dividirEntre), Digits);
             if (OrderType() == OP_BUY && stoplossCompra > OrderStopLoss()) {
                OrderModify(OrderTicket(),OrderOpenPrice(),stoplossCompra,0,0,Blue);
             }
             
-            double stoplossVenta = NormalizeDouble((trailingStopFactor) + Bid, Digits);
+            double stoplossVenta = NormalizeDouble((trailingStopFactor / dividirEntre) + Bid, Digits);
             if (OrderType() == OP_SELL && stoplossVenta < OrderStopLoss()) {
                OrderModify(OrderTicket(),OrderOpenPrice(),stoplossVenta,0,0,Blue);
             }
@@ -60,16 +60,22 @@ void checkTrailingStop() {
 
 
 double calculateLotSize(double SL) {
+   int divisor;
+   if (tamanioLote == 0) divisor = 1;
+   if (tamanioLote == 1) divisor = 100;
+   if (tamanioLote == 2) divisor = 10000;
    
-   double LotSize = 0;
    // We get the value of a tick.
    double nTickValue = MarketInfo(Symbol(), MODE_TICKVALUE);
    // If the digits are 3 or 5, we normalize multiplying by 10.
    if ((Digits == 3) || (Digits == 5)){
       nTickValue = nTickValue * 10;
    }
+   
    // We apply the formula to calculate the position size and assign the value to the variable.
-   LotSize = (cuenta * risk / 100) / (SL * 100 * nTickValue);
+   double LotSize = (cuenta * risk / 100) / (SL * divisor * nTickValue);
+   Print("LOTE");
+   Print(LotSize);
    return LotSize;
 }
 
