@@ -74,8 +74,6 @@ double calculateLotSize(double SL) {
    
    // We apply the formula to calculate the position size and assign the value to the variable.
    double LotSize = (cuenta * risk / 100) / (SL * divisor * nTickValue);
-   Print("LOTE");
-   Print(LotSize);
    return LotSize;
 }
 
