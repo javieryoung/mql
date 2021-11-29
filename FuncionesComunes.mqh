@@ -58,6 +58,16 @@ void checkTrailingStop() {
 }
 
 
+bool in_array(int needle) {
+   char arraySize = ArraySize(cuentas);
+   for(int i = 0; i < arraySize; i++) {
+      if(cuentas[i] == needle) {
+         return true;
+      }
+   }
+   return false;
+}
+
 
 double calculateLotSize(double SL) {
    int divisor;

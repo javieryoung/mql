@@ -3,7 +3,7 @@
 #property version   "1.00"
 #property strict
 
-double combinaciones[6][7][6] = {
+double combinaciones[6][6][6] = {
    // 03:00
    { // sl, trailing, minimoParaOperar, ticketBuy, ticketSell, ya se agrego al csv (o no)
       {5, 15, 3, 0, 0, 0},
@@ -11,8 +11,7 @@ double combinaciones[6][7][6] = {
       {3, 15, 6, 0, 0, 0},
       {4, 15, 6, 0, 0, 0},
       {3, 6, 6, 0, 0, 0},
-      {3, 20, 8, 0, 0, 0},
-      {5, 15, 8, 0, 0, 0}
+      {3, 20, 8, 0, 0, 0}
    },
    // 09:00
    { // sl, trailing, minimoParaOperar, ticketBuy, ticketSell, ya se agrego al csv (o no)
@@ -21,8 +20,7 @@ double combinaciones[6][7][6] = {
       {3, 15, 6, 0, 0, 0},
       {4, 15, 6, 0, 0, 0},
       {3, 6, 6, 0, 0, 0},
-      {3, 20, 8, 0, 0, 0},
-      {5, 15, 8, 0, 0, 0}
+      {3, 20, 8, 0, 0, 0}
    },
    // 10:00
    { // sl, trailing, minimoParaOperar, ticketBuy, ticketSell, ya se agrego al csv (o no)
@@ -31,8 +29,7 @@ double combinaciones[6][7][6] = {
       {3, 15, 6, 0, 0, 0},
       {4, 15, 6, 0, 0, 0},
       {3, 6, 6, 0, 0, 0},
-      {3, 20, 8, 0, 0, 0},
-      {5, 15, 8, 0, 0, 0}
+      {3, 20, 8, 0, 0, 0}
    },
    // 15:30
    { // sl, trailing, minimoParaOperar, ticketBuy, ticketSell, ya se agrego al csv (o no)
@@ -41,8 +38,7 @@ double combinaciones[6][7][6] = {
       {4, 15, 6, 0, 0, 0},
       {3, 15, 6, 0, 0, 0},
       {3, 6, 6, 0, 0, 0},
-      {3, 20, 8, 0, 0, 0},
-      {5, 15, 8, 0, 0, 0}
+      {3, 20, 8, 0, 0, 0}
    },
    //16:30
    { // sl, trailing, minimoParaOperar, ticketBuy, ticketSell, ya se agrego al csv (o no)
@@ -51,8 +47,7 @@ double combinaciones[6][7][6] = {
       {5, 8, 7, 0, 0, 0},
       {3, 10, 10, 0, 0, 0},
       {4, 10, 10, 0, 0, 0},
-      {3, 10, 10, 0, 0, 0},
-      {5, 12, 10, 0, 0, 0}
+      {3, 10, 10, 0, 0, 0}
    },
    // 17:00
    { // sl, trailing, minimoParaOperar, ticketBuy, ticketSell, ya se agrego al csv (o no)
@@ -61,8 +56,7 @@ double combinaciones[6][7][6] = {
       {5, 11, 8, 0, 0, 0},
       {3, 16, 10, 0, 0, 0},
       {4, 16, 10, 0, 0, 0},
-      {4, 10, 10, 0, 0, 0},
-      {5, 10, 10, 0, 0, 0}
+      {4, 10, 10, 0, 0, 0}
    }
 
 };
