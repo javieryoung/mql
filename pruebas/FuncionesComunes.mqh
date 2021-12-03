@@ -56,7 +56,7 @@ void checkTrailingStop() {
       }
    }
 }
-
+/*
 
 bool in_array(int needle) {
    char arraySize = ArraySize(cuentas);
@@ -67,7 +67,7 @@ bool in_array(int needle) {
    }
    return false;
 }
-
+*/
 
 double calculateLotSize(double SL) {
    double lotSize = MarketInfo(Symbol(), MODE_LOTSIZE);
