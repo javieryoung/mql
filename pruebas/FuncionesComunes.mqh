@@ -70,9 +70,20 @@ bool in_array(int needle) {
 */
 
 double calculateLotSize(double SL) {
+    string baseCurr = StringSubstr(Symbol(),0,3);
+    string crossCurr = StringSubstr(Symbol(),3,3);
+    
    double lotSize = MarketInfo(Symbol(), MODE_LOTSIZE);
-   double volume = (cuenta * (risk / 100)) / (SL * lotSize);
    
+   double volume;
+   if(crossCurr == AccountCurrency()) {
+      volume = (cuenta * (risk / 100)) / (SL * lotSize);
+    } else if(baseCurr == AccountCurrency()) {
+    
+      volume = (cuenta * (risk / 100) * Ask) / (SL * lotSize);
+    }
+    
+    
    double maxLotSize = MarketInfo(Symbol(), MODE_MAXLOT);
    if (volume > maxLotSize) volume = maxLotSize;
    double minLotSize = MarketInfo(Symbol(), MODE_MINLOT);
