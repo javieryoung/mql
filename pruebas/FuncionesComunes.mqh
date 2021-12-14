@@ -77,18 +77,12 @@ double calculateLotSize(double SL) {
    
    double volume;
    if(crossCurr == AccountCurrency()) {
-      volume = (cuenta * (risk / 100)) / (SL * lotSize);
+      volume = (cuenta * (risk / 100.0)) / (SL * lotSize);
     } else if(baseCurr == AccountCurrency()) {
-    
-      volume = (cuenta * (risk / 100) * Ask) / (SL * lotSize);
+      volume = (cuenta * (risk / 100.0) * Ask) / (SL * lotSize);
     }
     
     
-   double maxLotSize = MarketInfo(Symbol(), MODE_MAXLOT);
-   if (volume > maxLotSize) volume = maxLotSize;
-   double minLotSize = MarketInfo(Symbol(), MODE_MINLOT);
-   if (volume < minLotSize) volume = minLotSize;
-   
    return volume;
 }
 

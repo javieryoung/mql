@@ -3,60 +3,61 @@
 #property version   "1.00"
 #property strict
 
-double combinaciones[6][6][6] = {
+int combinaciones[6][6][6] = {
    // 03:00
-   { // sl, trailing, minimoParaOperar, ticketBuy, ticketSell, ya se agrego al csv (o no)
-      {4, 10, 2, 0, 0, 0},
+   { // sl, tp, minimoParaOperar, ticketBuy, ticketSell, ya se agrego al csv (o no)
+      {3, 9, 2, 0, 0, 0},
+      {3, 12, 2, 0, 0, 0},
+      {4, 8, 2, 0, 0, 0},
       {4, 12, 2, 0, 0, 0},
       {5, 10, 2, 0, 0, 0},
-      {5, 12, 2, 0, 0, 0},
-      {6, 10, 2, 0, 0, 0},
-      {6, 12, 2, 0, 0, 0}
+      {5, 10, 3, 0, 0, 0}
    },
    // 09:00
-   { // sl, trailing, minimoParaOperar, ticketBuy, ticketSell, ya se agrego al csv (o no)
-      {4, 10, 2, 0, 0, 0},
+   { // sl, tp, minimoParaOperar, ticketBuy, ticketSell, ya se agrego al csv (o no)
+      {3, 9, 2, 0, 0, 0},
+      {3, 12, 2, 0, 0, 0},
+      {4, 8, 2, 0, 0, 0},
       {4, 12, 2, 0, 0, 0},
       {5, 10, 2, 0, 0, 0},
-      {5, 12, 2, 0, 0, 0},
-      {6, 10, 2, 0, 0, 0},
-      {6, 12, 2, 0, 0, 0}
+      {5, 15, 2, 0, 0, 0}
    },
    // 10:00
-   { // sl, trailing, minimoParaOperar, ticketBuy, ticketSell, ya se agrego al csv (o no)
-      {4, 10, 6, 0, 0, 0},
-      {4, 12, 6, 0, 0, 0},
-      {5, 10, 6, 0, 0, 0},
-      {5, 12, 6, 0, 0, 0},
-      {6, 10, 6, 0, 0, 0},
-      {6, 12, 6, 0, 0, 0}
+   { // sl, tp, minimoParaOperar, ticketBuy, ticketSell, ya se agrego al csv (o no)
+      
+      {3, 9, 3, 0, 0, 0},
+      {3, 12, 3, 0, 0, 0},
+      {4, 8, 2, 0, 0, 0},
+      {4, 12, 3, 0, 0, 0},
+      {5, 10, 3, 0, 0, 0},
+      {5, 15, 3, 0, 0, 0}
    },
    // 15:30
-   { // sl, trailing, minimoParaOperar, ticketBuy, ticketSell, ya se agrego al csv (o no)
-      {4, 10, 10, 0, 0, 0},
-      {4, 12, 10, 0, 0, 0},
-      {5, 10, 10, 0, 0, 0},
-      {5, 12, 10, 0, 0, 0},
-      {6, 10, 10, 0, 0, 0},
-      {6, 12, 10, 0, 0, 0}
+   { // sl, tp, minimoParaOperar, ticketBuy, ticketSell, ya se agrego al csv (o no)
+      {3, 9, 3, 0, 0, 0},
+      {3, 12, 4, 0, 0, 0},
+      {4, 8, 3, 0, 0, 0},
+      {4, 12, 4, 0, 0, 0},
+      {5, 10, 4, 0, 0, 0},
+      {5, 15, 4, 0, 0, 0}
    },
    //16:30
-   { // sl, trailing, minimoParaOperar, ticketBuy, ticketSell, ya se agrego al csv (o no)
-      {4, 10, 8, 0, 0, 0},
-      {4, 12, 8, 0, 0, 0},
-      {5, 10, 8, 0, 0, 0},
-      {5, 12, 8, 0, 0, 0},
-      {6, 10, 8, 0, 0, 0},
-      {6, 12, 8, 0, 0, 0}
+   { // sl, tp, minimoParaOperar, ticketBuy, ticketSell, ya se agrego al csv (o no)
+      {3, 9, 4, 0, 0, 0},
+      {3, 12, 4, 0, 0, 0},
+      {4, 8, 4, 0, 0, 0},
+      {4, 12, 4, 0, 0, 0},
+      {5, 10, 4, 0, 0, 0},
+      {5, 15, 4, 0, 0, 0}
    },
    // 17:00
-   { // sl, trailing, minimoParaOperar, ticketBuy, ticketSell, ya se agrego al csv (o no)
-      {4, 10, 10, 0, 0, 0},
-      {4, 12, 10, 0, 0, 0},
-      {5, 10, 10, 0, 0, 0},
-      {5, 12, 10, 0, 0, 0},
-      {6, 10, 10, 0, 0, 0},
-      {6, 12, 10, 0, 0, 0}
+   { // sl, tp, minimoParaOperar, ticketBuy, ticketSell, ya se agrego al csv (o no)
+      {3, 9, 4, 0, 0, 0},
+      {3, 12, 4, 0, 0, 0},
+      {4, 8, 4, 0, 0, 0},
+      {4, 12, 4, 0, 0, 0},
+      {5, 10, 4, 0, 0, 0},
+      {5, 15, 4, 0, 0, 0}
    }
 
 };

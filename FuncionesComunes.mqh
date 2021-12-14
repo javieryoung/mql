@@ -45,12 +45,12 @@ void checkTrailingStop() {
          
             double stoplossCompra = NormalizeDouble(Ask - (trailingStopFactor / dividirEntre), Digits);
             if (OrderType() == OP_BUY && stoplossCompra > OrderStopLoss()) {
-               OrderModify(OrderTicket(),OrderOpenPrice(),stoplossCompra,0,0,Blue);
+               OrderModify(OrderTicket(),OrderOpenPrice(),stoplossCompra,OrderTakeProfit(),0,Blue);
             }
             
             double stoplossVenta = NormalizeDouble((trailingStopFactor / dividirEntre) + Bid, Digits);
             if (OrderType() == OP_SELL && stoplossVenta < OrderStopLoss()) {
-               OrderModify(OrderTicket(),OrderOpenPrice(),stoplossVenta,0,0,Blue);
+               OrderModify(OrderTicket(),OrderOpenPrice(),stoplossVenta,OrderTakeProfit(),0,Blue);
             }
          }
       }
