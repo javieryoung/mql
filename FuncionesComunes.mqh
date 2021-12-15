@@ -52,6 +52,7 @@ void checkTrailingStop() {
             if (OrderType() == OP_SELL && stoplossVenta < OrderStopLoss()) {
                OrderModify(OrderTicket(),OrderOpenPrice(),stoplossVenta,OrderTakeProfit(),0,Blue);
             }
+            
          }
       }
    }
