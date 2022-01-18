@@ -9,14 +9,6 @@
 #property strict
 
 
-int cuentas[] = {44127800,44127805,220080060,4310842,4310839,4336520,
-   4312124, 3364688, 4312124, 4337328, 66240634, 4310843, 4313395, 4313866, 4313865, 4314119,
-   4313793, // Mati
-   4314267,
-   4315773, // JD y Javi MFF
-   1300158229, 1300159075, // Juan FTMO
-   66281006 // True Forex Funds
-};
 
 void checkBreakEven() {
    double minimumDistance = MarketInfo( Symbol(), MODE_STOPLEVEL );
@@ -79,25 +71,15 @@ bool in_array(int needle) {
 }
 
 
-
 double calculateLotSize(double SL) {
-   string baseCurr = StringSubstr(Symbol(),0,3);
-   string crossCurr = StringSubstr(Symbol(),3,3);
-    
    double lotSize = MarketInfo(Symbol(), MODE_LOTSIZE);
+   double volume = (cuenta * (risk / 100)) / (SL * lotSize);
    
-   double volume;
-   if(crossCurr == AccountCurrency()) {
-      volume = (cuenta * (risk / 100.0)) / (SL * lotSize);
-    } else if(baseCurr == AccountCurrency()) {
-      volume = (cuenta * (risk / 100.0)) / (SL * lotSize * Ask);
-    } else {
-      volume = (cuenta * (risk / 100.0)) / (SL * lotSize);
-    }
-    
-    double maxLots= MarketInfo(Symbol(), MODE_MAXLOT);
-    if (volume > maxLots) volume = maxLots;
-    
+   double maxLotSize = MarketInfo(Symbol(), MODE_MAXLOT);
+   if (volume > maxLotSize) volume = maxLotSize;
+   double minLotSize = MarketInfo(Symbol(), MODE_MINLOT);
+   if (volume < minLotSize) volume = minLotSize;
+   
    return volume;
 }
 
@@ -113,5 +95,4 @@ bool isNewCandle() {
       return true;
    }
 }
-
 

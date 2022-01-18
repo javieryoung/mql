@@ -1,0 +1,16 @@
+cuenta=20000.00000000
+risk=0.10000000
+sl=10.00000000
+tp=11.00000000
+minimoParaOperar=9.00000000
+minimoParaUsarLoca=0.00000000
+breakEvenEnabled=1
+breakEvenFactor=0.20000000
+trailingStopEnabled=1
+trailingStopFactor=15.00000000
+horaComienzo=5
+minutoComienzo=30
+horaFin=5
+minutoFin=31
+dividirEntre=100000.00000000
+licencia=
