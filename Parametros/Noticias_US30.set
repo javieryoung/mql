@@ -1,0 +1,17 @@
+cuenta=20000.0
+risk=1.0
+sl=5.0
+tp=15.0
+forzarTp=true
+minimoParaOperar=5.0
+minimoParaUsarLoca=0.0
+breakEvenEnabled=true
+breakEvenFactor=0.2
+trailingStopEnabled=true
+trailingStopFactor=10.0
+horaComienzo=20
+minutoComienzo=1
+horaFin=20
+minutoFin=2
+dividirEntre=1.0
+licencia=
