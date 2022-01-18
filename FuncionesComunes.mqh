@@ -86,6 +86,9 @@ double calculateLotSize(double SL) {
       volume = (cuenta * (risk / 100.0)) / (SL * lotSize);
     }
     
+    double maxLots= MarketInfo(Symbol(), MODE_MAXLOT);
+    if (volume > maxLots) volume = maxLots;
+    
    return volume;
 }
 
