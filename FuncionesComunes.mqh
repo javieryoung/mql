@@ -15,7 +15,8 @@ int cuentas[] = {44127800,44127805,220080060,4310842,4310839,4336520,
    4314267,
    4315773, // JD y Javi MFF
    1300158229, 1300159075, // Juan FTMO
-   66281006 // True Forex Funds
+   66281006, // True Forex Funds
+   111164, 4315777 // Leo
 };
 
 void checkBreakEven() {
