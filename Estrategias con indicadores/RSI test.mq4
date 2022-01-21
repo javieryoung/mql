@@ -12,12 +12,6 @@
 input int Magic = 101010;
 
 
-input double cuenta = 20000;
-input double risk = 0.1;
-input bool breakEvenEnabled = false; // activar break even
-input double breakEvenFactor = 0.6; // % break even
-input bool trailingStopEnabled = false; // trailing stop
-input double trailingStopFactor = 10; // valor de trailing
 
 
 input int horaComienzo = 23; // hora comenzar a operar
@@ -27,7 +21,6 @@ input int minutoFin = 0; // minuto comenzar a operar
 
 input double takeprofit = 3;
 input double stoploss = 10;
-input double dividirEntre = 10000;
 
 #include <../Experts/FuncionesComunes.mqh>
 
