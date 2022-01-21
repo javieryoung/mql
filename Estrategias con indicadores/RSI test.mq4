@@ -8,7 +8,6 @@
 #property version   "1.00"
 #property strict
 
-#include <../Experts/FuncionesComunes.mqh>
 
 input int Magic = 101010;
 
@@ -21,15 +20,16 @@ input bool trailingStopEnabled = false; // trailing stop
 input double trailingStopFactor = 10; // valor de trailing
 
 
-input int horaComienzo = 0; // hora comenzar a operar
+input int horaComienzo = 23; // hora comenzar a operar
 input int minutoComienzo = 0; // minuto comenzar a operar
-input int horaFin = 24; // hora comenzar a operar
+input int horaFin = 3; // hora comenzar a operar
 input int minutoFin = 0; // minuto comenzar a operar
 
 input double takeprofit = 3;
 input double stoploss = 10;
 input double dividirEntre = 10000;
 
+#include <../Experts/FuncionesComunes.mqh>
 
 
 
@@ -41,6 +41,11 @@ double sl() {
 }
 
 int OnInit() {
+   long  account  =  AccountInfoInteger(ACCOUNT_LOGIN);
+   if (!in_array(account)){
+      Print("CUENTA INVALIDA");
+      //return(INIT_FAILED);
+   }
    return(INIT_SUCCEEDED);
 }
 
